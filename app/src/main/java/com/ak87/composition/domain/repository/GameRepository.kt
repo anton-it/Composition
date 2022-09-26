@@ -6,8 +6,8 @@ import com.ak87.composition.domain.entity.Questions
 
 interface GameRepository {
     fun generateQuestion(
-        maxSumValue: Int,
-        countOfOptions: Int
+        maxSumValue: Int,  //максимальное значение которое нужно сгенинировать в поле сумма
+        countOfOptions: Int // кол-во вариантов ответов
     ): Questions
 
     fun getGameSettings(level: Level): GameSettings

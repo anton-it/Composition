@@ -21,7 +21,7 @@ object GameRepositoryImpl: GameRepository {
         option.add(rightAnswer)
         //продолжаем генирировать варианты ответов
         val from = max(rightAnswer - countOfOptions, MIN_ANSWER_VALUE)
-        val to = min(maxSumValue, rightAnswer - countOfOptions)
+        val to = min(maxSumValue, rightAnswer + countOfOptions)
         while (option.size < countOfOptions) {
             option.add(Random.nextInt(from, to))
         }
